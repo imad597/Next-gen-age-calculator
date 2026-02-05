@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Next Gen Age Calculator - Precise Life Insights</title>
+  <meta name="description" content="Calculate your exact age, next birthday countdown, and life timeline with the professional Next Gen Age Calculator." />
+
+  <!-- ✅ FAVICON (CORRECT PATH BASED ON YOUR FOLDER) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="pages/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="pages/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="pages/favicon.png">
+  <link rel="shortcut icon" href="pages/favicon.png" type="image/png">
+
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- Classic Elegant Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<header class="navbar">
+  <div class="nav-container">
+
+    <!-- Hamburger Button -->
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <!-- Website Name -->
+    <div class="logo">Next-Gen Age Calculator</div>
+
+    <!-- Navigation Links -->
+    <nav id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="pages/about.html">About</a>
+      <a href="pages/privacy.html">Privacy</a>
+      <a href="pages/terms.html">Terms</a>
+      <a href="pages/contact.html">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+  <div class="container">
+
+    <h1>🧮Next-Gen Age Calculator</h1>
+    <p class="subtitle">Discover your exact age and life timeline</p>
+
+    <div class="card">
+      <label>Date of Birth</label>
+      <input type="date" id="dob" />
+
+      <label>Calculate Age On (Optional)</label>
+      <input type="date" id="targetDate" />
+
+      <button id="calcBtn">Calculate Age</button>
+    </div>
+
+    <div id="results" class="card hidden">
+      <h2>📊 Your Life Timeline</h2>
+
+      <div class="stats-grid" id="ageStats"></div>
+    </div>
+
+    <div id="nextBirthday" class="card hidden">
+      <h2>Next Birthday Countdown 🎂</h2>
+      <p id="birthdayCountdown"></p>
+    </div>
+
+    <div id="funFacts" class="card hidden">
+      <h2>Life Facts ✨</h2>
+      <ul id="factsList"></ul>
+    </div>
+
+    <div class="card">
+      <h2>How Age is Calculated</h2>
+      <p>Our Next-Gen Age Calculator uses precise calendar-based calculations that account for leap years, different month lengths, and exact day differences. This ensures highly accurate age results.</p>
+      <p>Instead of simply subtracting years, the system calculates the true time difference between your birth date and the selected date.</p>
+
+      <h2>Why Use Next-Gen Age Calculator?</h2>
+      <p>This tool is helpful for government job eligibility checks, educational use, birthday planning, and personal record keeping. It works instantly and does not store any personal information.</p>
+    </div>
+
+    <div class="card">
+      <h2>Disclaimer</h2>
+      <p>This calculator is designed for informational purposes only. While we strive for accuracy, results should not be considered official for legal or government decisions.</p>
+    </div>
+
+    <footer class="footer">
+      © 2026 Next-Gen Age Calculator. All rights reserved. |
+      <a href="pages/about.html">About</a> |
+      <a href="pages/privacy.html">Privacy</a> |
+      <a href="pages/terms.html">Terms</a> |
+      <a href="pages/contact.html">Contact</a> |
+      <a href="pages/how-age-is-calculated.html">How It Works</a>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

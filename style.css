@@ -1,0 +1,259 @@
+:root {
+  --bg: #0f172a;
+  --card: rgba(30, 41, 59, 0.8);
+  --border: #334155;
+  --text: #f1f5f9;
+  --accent: linear-gradient(135deg, #3b82f6, #8b5cf6);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* NAVBAR */
+.navbar {
+  background: rgba(15, 23, 42, 0.95);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 20px;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.navbar nav a {
+  margin-left: 18px;
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.navbar nav a:hover {
+  color: white;
+}
+
+/* MAIN LAYOUT */
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+}
+
+label {
+  display:block;
+  margin:10px 0 5px;
+  font-size:14px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover { transform: scale(1.03); }
+button:active { transform: scale(0.97); }
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+}
+
+.stat-box {
+  background: rgba(51,65,85,0.6);
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.footer {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 40px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border);
+  color: #94a3b8;
+}
+
+.footer a {
+  color: #93c5fd;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.hidden { display: none; }
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 600px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .navbar nav a {
+    margin: 0 8px;
+  }
+}
+/* Make all form inputs and textarea full width */
+input,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+/* Message box specific styling */
+textarea {
+  min-height: 140px; /* height */
+  resize: vertical;
+  line-height: 1.6;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99,102,241,0.2);
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Forces 3 equal boxes */
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.stat-box {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+/* ===== NAVBAR ===== */
+.navbar {
+  background: #0f172a;
+  padding: 12px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+nav a:hover {
+  color: white;
+}
+
+/* Hamburger */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+/* 📱 Mobile Menu */
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #0f172a;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 15px 0;
+  }
+
+  nav a {
+    padding: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav.active {
+    display: flex;
+  }
+}
